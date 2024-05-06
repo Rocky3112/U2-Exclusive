@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-white position-fixed z-2 w-100">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img class="logo" height="30" width="30" src="img/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,7 +29,10 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -56,7 +59,7 @@
     </nav>
 
     <!--carousel-->
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide py-5">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -91,12 +94,12 @@
 
 
     <!--card section starts here-->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-3">
+    <div class="container my-5">
+        <div class="row row-gap-5">
+            <div class="col-lg-3 gap-3">
                 <div class="card">
                     <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
+                        <img class="c-img" src="img/c2.webp" alt="">
                     </div>
                     <div class="card-title">
                         <h3> Name : T-shirt</h3>
@@ -119,7 +122,30 @@
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
+                        <img class="c-img" src="img/c7.webp" alt="">
+                    </div>
+                    <div class="card-title">
+                        <h3> Name : T-shirt</h3>
+                    </div>
+                    <div class="card-current-price">
+                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                    </div>
+
+                    <div class="card-desc">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis obcaecati itaque facere a,
+                            
+                        </p>
+                    </div>
+                    <div class="add-to-cart">
+                        <button class="btn btn-success  d-block">add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-img">
+                        <img class="c-img" src="img/c4.webp" alt="">
                     </div>
                     <div class="card-title">
                         <h3> Name : T-shirt</h3>
@@ -162,34 +188,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
-                    </div>
-                    <div class="card-title">
-                        <h3> Name : T-shirt</h3>
-                    </div>
-                    <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
-                    </div>
-
-                    <div class="card-desc">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis obcaecati itaque facere a,
-                            
-                        </p>
-                    </div>
-                    <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
+                        <img class="c-img" src="img/c5.webp" alt="">
                     </div>
                     <div class="card-title">
                         <h3> Name : T-shirt</h3>
@@ -212,7 +215,7 @@
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
+                        <img class="c-img" src="img/c6.webp" alt="">
                     </div>
                     <div class="card-title">
                         <h3> Name : T-shirt</h3>
@@ -235,7 +238,7 @@
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
+                        <img class="c-img" src="img/c2.webp" alt="">
                     </div>
                     <div class="card-title">
                         <h3> Name : T-shirt</h3>
@@ -258,7 +261,7 @@
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-img">
-                        <img class="c-img" src="img/c1.webp" alt="">
+                        <img class="c-img" src="img/c8.webp" alt="">
                     </div>
                     <div class="card-title">
                         <h3> Name : T-shirt</h3>
@@ -280,6 +283,52 @@
         </div>
     </div>
     <!--card section end here--->
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat elit nec ex fermentum, ut
+                    aliquet eros hendrerit.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <address>
+                    <strong>Address:</strong><br>
+                    123 Ecommerce Street,<br>
+                    City, Country<br>
+                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Phone:</strong> +123-456-7890
+                </address>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Your Ecommerce. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
