@@ -1,1 +1,1 @@
-*** Full Stack Project with PHP 
+## Full Stack E-Commerce Project with PHP
