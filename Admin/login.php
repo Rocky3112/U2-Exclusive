@@ -1,23 +1,22 @@
 <?php
-  include 'db.php';
-  session_start();
+  // include 'db.php';
+  // session_start();
  
-  if(isset($_POST['login'])){
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
+  // if(isset($_POST['login'])){
+  //   $email = $_POST['email'];
+  //   $pass = $_POST['pass'];
 
-
-    $select = "SELECT * from admin Where email='$email'
-    AND pass='$pass' ";
-    $ex = mysqli_query($con,$select);
-    $row = mysqli_fetch_array($ex);
-    if($row){
-       $_SESSION['email'] = $row['email'];
-       header("location:index.php");
-    }else{
-      echo "<script>alert('email and pass doesnot match')</script>";
-    }
-  }
+  //   $select = "SELECT * from admin Where email='$email'
+  //   AND pass='$pass' ";
+  //   $ex = mysqli_query($con,$select);
+  //   $row = mysqli_fetch_array($ex);
+  //   if($row){
+  //      $_SESSION['email'] = $row['email'];
+  //      header("location:index.php");
+  //   }else{
+  //     echo "<script>alert('email and pass doesnot match')</script>";
+  //   }
+  // }
 
 ?>
 

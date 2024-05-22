@@ -5,19 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>U2 Exclusive</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+       
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-white position-fixed z-2 w-100">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="logo" height="30" width="30" src="img/logo.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -70,10 +69,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="banner" src="img/banner.jpg" alt="...">
+                <img class="banner" src="img/banner2.jpg" alt="...">
             </div>
             <div class="carousel-item">
-                <img class="banner" src="img/banner2.jpg" alt="...">
+                <img class="banner" src="img/banner.jpg" alt="...">
             </div>
             <div class="carousel-item">
                 <img class="banner" src="img/banner3.jpg" alt="...">
@@ -115,7 +114,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success d-block">add to cart</button>
+                        <button class="btn btn-success d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -138,7 +137,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
+                        <button class="btn btn-success  d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -161,7 +160,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
+                        <button class="btn btn-success  d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -184,7 +183,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
+                        <button class="btn btn-success  d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -208,7 +207,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success d-block">add to cart</button>
+                        <button class="btn btn-success d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -231,7 +230,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
+                        <button class="btn btn-success  d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -254,7 +253,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
+                        <button class="btn btn-success  d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -276,7 +275,7 @@
                         </p>
                     </div>
                     <div class="add-to-cart">
-                        <button class="btn btn-success  d-block">add to cart</button>
+                        <button class="btn btn-success  d-block">Add To Cart</button>
                     </div>
                 </div>
             </div>
