@@ -1,14 +1,4 @@
-<?php
-  // include 'db.php';
-  // session_start();
-  // $email ="";
-  // if($_SESSION['email']==true){
-  //   $email  =$_SESSION['email'] ;
-  // }else{
-  //   header("location:login.php");
-  // }
 
-  ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
