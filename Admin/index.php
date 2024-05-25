@@ -29,7 +29,7 @@ else{
       content="Rich is powerful and clean admin dashboard template, inpired from Google's Material Design"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Rich Admin Template by Jassa</title>
+    <title>Rocky Admin Template by Rocky</title>
     <link rel="canonical" href="https://therichpost.com" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png" />
@@ -708,7 +708,7 @@ else{
                       />
                     </div>
                     <div class="ms-2">
-                      <h4 class="mb-0">Rich Jassa</h4>
+                      <h4 class="mb-0">AH Rocky</h4>
                       
                     </div>
                   </div>
@@ -772,7 +772,7 @@ else{
                       aria-expanded="false"
                     >
                       <h5 class="mb-0 user-name font-medium">
-                        Rich Jassa
+                        AH Rocky
                         <i data-feather="chevron-down" class="feather-sm"></i>
                       </h5>
                       <span class="op-5 user-email"> <?php echo $email ?></span>
@@ -794,7 +794,7 @@ else{
                         Account Setting</a
                       >
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="logout.php"
                         ><i data-feather="log-out" class="feather-sm text-danger me-1"></i>
                         Logout</a
                       >
