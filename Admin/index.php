@@ -1,4 +1,18 @@
+<?php
 
+include 'db.php';
+session_start();
+$email ="";
+
+if($_SESSION['email']== true){
+  $email = $_SESSION['email'] ;
+}
+else{
+  header('location:login.php');
+}
+
+
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
@@ -761,7 +775,7 @@
                         Rich Jassa
                         <i data-feather="chevron-down" class="feather-sm"></i>
                       </h5>
-                      <span class="op-5 user-email"></span>
+                      <span class="op-5 user-email"> <?php echo $email ?></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
                       <a class="dropdown-item" href="#"
