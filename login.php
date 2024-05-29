@@ -26,7 +26,7 @@
                                 <input type="password" class="form-control" id="password" name="pass" placeholder="Enter password" required>
                             </div>
                             <div class="d-grid gap-2">
-                                <button type="submit" name="login" class="btn btn-primary fw-bold">Sign In</button>
+                                <button type="submit" name="login" class="btn btn-primary">Sign In</button>
                             </div>
                         </form>
                         <div class="text-center mt-3">
