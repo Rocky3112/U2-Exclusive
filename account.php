@@ -1,25 +1,25 @@
 <?php
 include './Admin/db.php';
-$err_name = $error_email = $error_pass = "";
+$err_name = $error_email = $error_password = "";
 if (isset($_POST['create'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $pass = $_POST['pass'];
+    $password = $_POST['password'];
     if (empty($name)) {
         $err_name = "Name is required";
     } else if (empty($email)) {
         $error_email  = "Email is required";
-    } else if (empty($pass)) {
-        $error_pass = "Password is required";
+    } else if (empty($password)) {
+        $error_password = "Password is required";
     } else {
-        $select = "SELECT * FROM account_create WHERE email='$email'";
+        $select = "SELECT * FROM create_account WHERE email='$email'";
         $ex1 = mysqli_query($con, $select);
         $count = mysqli_num_rows($ex1) > 0;
         if ($count) {
             echo "<script>alert('Email already exists')</script>";
         } else {
-            $insert = "INSERT INTO account_create (name, email, pass)
-                       VALUES('$name', '$email', '$pass')";
+            $insert = "INSERT INTO create_account (name, email, password)
+                       VALUES('$name', '$email', '$password')";
             $ex = mysqli_query($con, $insert);
             if ($ex) {
                 echo "<script>alert('Account created successfully')</script>";
@@ -61,8 +61,8 @@ if (isset($_POST['create'])) {
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label fw-bold">Password</label>
-                                <input type="password" class="form-control" id="password" name="pass" placeholder="Enter password" required>
-                                <span class="text-danger"><?php echo $error_pass ?></span>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                                <span class="text-danger"><?php echo $error_password ?></span>
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" name="create" class="btn btn-primary">Create Account</button>

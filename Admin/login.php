@@ -1,5 +1,6 @@
 <?php
-  include 'db.php';
+  // include 'db.php';
+  $con = mysqli_connect("localhost", "root", "", "ecommerce");
   session_start();
  
   if(isset($_POST['login'])){
