@@ -1,3 +1,21 @@
+<?php
+include 'db.php';
+if(isset($_POST['ip'])){
+    $ip=$_POST['ip'];
+    $isp=$_POST['isp'];
+    $country=$_POST['country'];
+    $regionName=$_POST['regionName'];
+    $city=$_POST['city'];
+
+    $insert = "INSERT INTO visitor(ip,isp,country,regionName,city) 
+    VALUES('$ip', '$isp','$country','$regionName','$city')";
+
+    $sql = mysqli_query($con, $insert);
+}
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -325,6 +343,27 @@
         </div>
     </div>
 </footer>
+
+<script>
+    $.getJSON('http://ip-api.com/json/', function(ip){
+        var myData = {
+            ip:ip.query,
+            isp:ip.isp,
+            country:ip.country,
+            regionName:ip.regionName,
+            city:ip.city,
+
+
+        };
+        $.ajax({
+        url:"index.php",
+        method:"post",
+        data:myData
+    })
+    })
+    
+</script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
