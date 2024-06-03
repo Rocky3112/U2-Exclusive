@@ -1,3 +1,24 @@
+<?php
+ include 'db.php';
+ session_start();
+  if(isset($_POST['login'])){
+       $email = $_POST['email'];
+       $password = $_POST['password'];
+
+       $sel = "SELECT * FROM create_account where email='$email' AND password='$password'";
+       $ex = mysqli_query($con,$sel);
+       $row = mysqli_fetch_array($ex);
+       if($row){
+        $_SESSION['email'] = $row['email'];
+        header("location:product.php");
+       }else{
+        echo "<script>alert('email and pass doesnot match')</script>";
+       }
+  }
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +44,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label fw-bold">Password</label>
-                                <input type="password" class="form-control" id="password" name="pass" placeholder="Enter password" required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" name="login" class="btn btn-primary">Sign In</button>
