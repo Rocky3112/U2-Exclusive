@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="index.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <script src="https://kit.fontawesome.com/a008b2dede.js" crossorigin="anonymous"></script>
        
 </head>
 
@@ -48,7 +49,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Login
+                            Account
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="account.php">Account</a></li>
@@ -56,6 +57,9 @@
                             <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><?php echo $email ?></a>
@@ -114,10 +118,10 @@
                         <img class="c-img" src="img/c2.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Smart Watch</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 3500/- <span class="text-warning"> <del>4580</del></span></h4>
                     </div>
 
                     <div class="card-desc">
@@ -137,10 +141,10 @@
                         <img class="c-img" src="img/c7.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Shoe</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 1550/- <span class="text-warning"> <del>1700</del></span></h4>
                     </div>
 
                     <div class="card-desc">
@@ -160,10 +164,10 @@
                         <img class="c-img" src="img/c4.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Neck Band</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 2550/- <span class="text-warning"> <del>2700</del></span></h4>
                     </div>
 
                     <div class="card-desc">
@@ -207,10 +211,10 @@
                         <img class="c-img" src="img/c5.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Formal Shoe</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 2550/- <span class="text-warning"> <del>3000</del></span></h4>
                     </div>
 
                     <div class="card-desc">
@@ -230,10 +234,10 @@
                         <img class="c-img" src="img/c6.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Fashion Watch</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 550/- <span class="text-warning"> <del>800</del></span></h4>
                     </div>
 
                     <div class="card-desc">
@@ -253,10 +257,10 @@
                         <img class="c-img" src="img/c2.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Smart Watch</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 2550/- <span class="text-warning"> <del>3700</del></span></h4>
                     </div>
 
                     <div class="card-desc">
@@ -276,10 +280,10 @@
                         <img class="c-img" src="img/c8.webp" alt="">
                     </div>
                     <div class="card-title">
-                        <h3> Name : T-shirt</h3>
+                        <h3> Name : Slipper Sandle</h3>
                     </div>
                     <div class="card-current-price">
-                        <h4>price: 550/- <span class="text-warning"> <del>700</del></span></h4>
+                        <h4>price: 450/- <span class="text-warning"> <del>700</del></span></h4>
                     </div>
                     <div class="card-desc">
                         <p>
