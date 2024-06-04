@@ -890,13 +890,12 @@ else{
 
               </form>
               <table class='table'>
-                    <th>Product Name</th>
+                    <th>Name</th>
                     <th>Description</th>
-                    
                     <th>Current price</th>
                     <th>Discount price</th>
                     <th>Buying price</th>
-                    <th>title</th>
+                    <th>Title</th>
                     <th>Image</th>
                     <th>MB</th>
                     <th>Action</th>
@@ -924,10 +923,22 @@ else{
             "<td><input name='title[]' type='text'placeholder='Enter prodcut title' class='form-control'></td>"+ 
             "<td><input name='img[]' type='file' class='form-control file'></td>"+ 
             "<td class='myfileSize'></td>"+ 
-            "<td><button class='btn btn-danger cancle-btn'>Cancel </button></td>"+ 
+            "<td><button class='btn btn-danger cancel-btn'>Cancel </button></td>"+ 
             "</tr>";
 
             $('.Tbodydata').append(tbody);
+
+            // for cancel button
+            $(".cancel-btn").on('click', function(){
+              $(this).parents('tr').remove();
+            })
+                // for show file size
+            $(".file").on('change', function(){
+              
+              var myFiles =$(this).prop('files');
+              var fileSize = ((myFiles[0].size)/(1024*1024)).toFixed(2);
+              $(this).closest('tr').find('.myfileSize').html(fileSize+ 'MB')
+            })
           
         })
 
