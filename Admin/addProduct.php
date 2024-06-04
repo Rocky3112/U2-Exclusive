@@ -43,12 +43,12 @@ else{
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <!-- -------------------------------------------------------------- -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- -------------------------------------------------------------- -->
+    
+  
     <div class="preloader">
       <svg
         class="tea lds-ripple"
@@ -93,13 +93,7 @@ else{
         ></path>
       </svg>
     </div>
-    <!-- -------------------------------------------------------------- -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- -------------------------------------------------------------- -->
     <div id="main-wrapper">
-      <!-- -------------------------------------------------------------- -->
-      <!-- Topbar header - style you can find in pages.scss -->
-      <!-- -------------------------------------------------------------- -->
       <header class="topbar">
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
           <div class="navbar-header">
@@ -110,9 +104,7 @@ else{
             >
               <i class="ri-close-line fs-6 ri-menu-2-line"></i>
             </a>
-            <!-- -------------------------------------------------------------- -->
-            <!-- Logo -->
-            <!-- -------------------------------------------------------------- -->
+            
             <a class="navbar-brand" href="index.html">
               <!-- Logo icon -->
               <b class="logo-icon">
@@ -126,8 +118,6 @@ else{
                   class="light-logo"
                 />
               </b>
-              <!--End Logo icon -->
-              <!-- Logo text -->
               <span class="logo-text">
                 <!-- dark Logo text -->
                 <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
@@ -139,12 +129,7 @@ else{
                 />
               </span>
             </a>
-            <!-- -------------------------------------------------------------- -->
-            <!-- End Logo -->
-            <!-- -------------------------------------------------------------- -->
-            <!-- -------------------------------------------------------------- -->
-            <!-- Toggle which is visible on mobile only -->
-            <!-- -------------------------------------------------------------- -->
+            
             <a
               class="topbartoggler d-block d-md-none waves-effect waves-light"
               href="javascript:void(0)"
@@ -156,13 +141,8 @@ else{
               ><i class="ri-more-line fs-6"></i
             ></a>
           </div>
-          <!-- -------------------------------------------------------------- -->
-          <!-- End Logo -->
-          <!-- -------------------------------------------------------------- -->
+          
           <div class="navbar-collapse collapse" id="navbarSupportedContent">
-            <!-- -------------------------------------------------------------- -->
-            <!-- toggle and nav items -->
-            <!-- -------------------------------------------------------------- -->
             <ul class="navbar-nav me-auto">
               <li class="nav-item d-none d-md-block">
                 <a
@@ -172,9 +152,6 @@ else{
                   ><i data-feather="menu" class="feather-sm"></i
                 ></a>
               </li>
-              <!-- -------------------------------------------------------------- -->
-              <!-- mega menu -->
-              <!-- -------------------------------------------------------------- -->
               <li class="nav-item dropdown mega-dropdown">
                 <a
                   class="nav-link dropdown-toggle waves-effect waves-dark"
@@ -677,12 +654,7 @@ else{
                   </ul>
                 </div>
               </li>
-              <!-- -------------------------------------------------------------- -->
-              <!-- End Messages -->
-              <!-- -------------------------------------------------------------- -->
-              <!-- -------------------------------------------------------------- -->
-              <!-- User profile and search -->
-              <!-- -------------------------------------------------------------- -->
+            
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
@@ -809,7 +781,7 @@ else{
               <li class="sidebar-item">
                 <a
                   class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="index.php" 
+                  href="#"
                   aria-expanded="false"
                   ><i data-feather="home" class="feather-icon"></i
                   ><span class="hide-menu">Dashboard </span></a
@@ -821,7 +793,7 @@ else{
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="addProduct.php" class="sidebar-link"
+                    <a href="index.html" class="sidebar-link"
                       ><i class="mdi mdi-adjust"></i><span class="hide-menu">Add Product </span></a
                     >
                   </li>
@@ -913,6 +885,10 @@ else{
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
+              <button id="addData" class="btn btn-primary p-2 px-4 fw-bold">Add Data</button>
+              <form id="myForm" method="post" enctype="multipart/form-data">
+
+              </form>
             </div>
           </div>
       </div>
@@ -920,7 +896,25 @@ else{
     </div>
    
     <div class="chat-windows"></div>
-    <script src="assets/js/jquery.min.js"></script>
+
+    <script>
+        $("#addData").click(function () {
+          var tbody = "<tr>" + 
+          "<td><input name='name[]' type='text' placeholder='Enter prodcut name'  class='form-control'></td>"+ 
+            "<td><input name='description[]' type='text'placeholder='Enter prodcut desc' class='form-control'></td>"+ 
+            "<td><input name='current_price[]' type='text'placeholder='Enter prodcut current price' class='form-control'></td>"+ 
+            "<td><input name='before_price[]' type='text'placeholder='Enter prodcut before price' class='form-control'></td>"+ 
+            "<td><input name='buying_price[]' type='text'placeholder='Enter prodcut buying price' class='form-control'></td>"+ 
+            "<td><input name='title[]' type='text'placeholder='Enter prodcut title' class='form-control'></td>"+ 
+            "<td><input name='img[]' type='file' class='form-control file'></td>"+ 
+            "<td class='myfileSize'></td>"+ 
+            "<td><button class='btn btn-success cancle-btn'>cancel </button></td>"+ 
+            "</tr>";
+          
+        })
+
+    </script>
+
     <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Theme Required Js -->

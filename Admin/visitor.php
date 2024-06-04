@@ -551,7 +551,7 @@ if ($_SESSION['email'] == true) {
                                             class="hide-menu">Visitor </span></a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a href="index.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span
+                                    <a href="addProduct.php" class="sidebar-link"><i class="mdi mdi-adjust"></i><span
                                             class="hide-menu">Add Product </span></a>
                                 </li>
                                 <li class="sidebar-item">
@@ -619,37 +619,37 @@ if ($_SESSION['email'] == true) {
                 </div>
             </div>
             <div class="container-fluid">
-            <div class="row">
-            <div class="col-12">
-               <h1>Total Visitors</h1>
-            <table id="myTable" class="display">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>IP</th>
-                        <th>ISP</th>
-                        <th>Country</th>
-                        <th>City</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <?php
-                      $select = "SELECT * FROM visitor";
-                      $ex = mysqli_query($con,$select);
-                      while($row= mysqli_fetch_array($ex)){ ?>
-                          <tr>
-                            <td><?php  echo $row['id'] ; ?></td>
-                            <td><?php  echo $row['ip'] ; ?></td>
-                            <td><?php  echo $row['isp'] ; ?></td>
-                            <td><?php  echo $row['country'] ; ?></td>
-                            <td><?php  echo $row['city'] ; ?></td>
-                          </tr>
-                    <?php  }
-                   ?>
-                </tbody>
-            </table>
-            </div>
-          </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Total Visitors</h1>
+                        <table id="myTable" class="display">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>IP</th>
+                                    <th>ISP</th>
+                                    <th>Country</th>
+                                    <th>City</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $select = "SELECT * FROM visitor";
+                                $ex = mysqli_query($con, $select);
+                                while ($row = mysqli_fetch_array($ex)) { ?>
+                                    <tr>
+                                        <td><?php echo $row['id']; ?></td>
+                                        <td><?php echo $row['ip']; ?></td>
+                                        <td><?php echo $row['isp']; ?></td>
+                                        <td><?php echo $row['country']; ?></td>
+                                        <td><?php echo $row['city']; ?></td>
+                                    </tr>
+                                <?php }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
         </div>
