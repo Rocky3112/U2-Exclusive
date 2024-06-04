@@ -889,6 +889,22 @@ else{
               <form id="myForm" method="post" enctype="multipart/form-data">
 
               </form>
+              <table class='table'>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    
+                    <th>Current price</th>
+                    <th>Discount price</th>
+                    <th>Buying price</th>
+                    <th>title</th>
+                    <th>Image</th>
+                    <th>MB</th>
+                    <th>Action</th>
+
+                    <tbody class='Tbodydata'>
+
+                    </tbody>
+                </table>
             </div>
           </div>
       </div>
@@ -908,8 +924,10 @@ else{
             "<td><input name='title[]' type='text'placeholder='Enter prodcut title' class='form-control'></td>"+ 
             "<td><input name='img[]' type='file' class='form-control file'></td>"+ 
             "<td class='myfileSize'></td>"+ 
-            "<td><button class='btn btn-success cancle-btn'>cancel </button></td>"+ 
+            "<td><button class='btn btn-danger cancle-btn'>Cancel </button></td>"+ 
             "</tr>";
+
+            $('.Tbodydata').append(tbody);
           
         })
 
