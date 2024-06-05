@@ -888,22 +888,23 @@ else{
               <button id="addData" class="btn btn-primary p-2 px-4 fw-bold">Add Data</button>
               <form id="myForm" method="post" enctype="multipart/form-data">
 
+                <table class='table'>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Current price</th>
+                      <th>Discount price</th>
+                      <th>Buying price</th>
+                      <th>Title</th>
+                      <th>Image</th>
+                      <th>MB</th>
+                      <th>Action</th>
+  
+                      <tbody class='Tbodydata'>
+  
+                      </tbody>
+                  </table>
+                  <button class="btn btn-primary p-2 px-4">Submit</button>
               </form>
-              <table class='table'>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Current price</th>
-                    <th>Discount price</th>
-                    <th>Buying price</th>
-                    <th>Title</th>
-                    <th>Image</th>
-                    <th>MB</th>
-                    <th>Action</th>
-
-                    <tbody class='Tbodydata'>
-
-                    </tbody>
-                </table>
             </div>
           </div>
       </div>
