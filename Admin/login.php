@@ -10,8 +10,8 @@
 
     $select = "SELECT * from admin where email='$email'
     AND password='$password' ";
-    $ex = mysqli_query($con,$select);
-    $row = mysqli_fetch_array($ex);
+    $exe = mysqli_query($con,$select);
+    $row = mysqli_fetch_array($exe);
     if($row){
        $_SESSION['email'] = $row['email'];
        header("location:index.php");

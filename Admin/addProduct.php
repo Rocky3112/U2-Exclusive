@@ -43,7 +43,7 @@ else{
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
 
   <body>
@@ -892,7 +892,7 @@ else{
                       <th>Name</th>
                       <th>Description</th>
                       <th>Current price</th>
-                      <th>Discount price</th>
+                      <th>Before price</th>
                       <th>Buying price</th>
                       <th>Title</th>
                       <th>Image</th>
@@ -914,7 +914,7 @@ else{
     <div class="chat-windows"></div>
 
     <script>
-        $("#addData").click(function () {
+        $("#addData").click(function(){
           var tbody = "<tr>" + 
           "<td><input name='name[]' type='text' placeholder='Enter prodcut name'  class='form-control'></td>"+ 
             "<td><input name='description[]' type='text'placeholder='Enter prodcut desc' class='form-control'></td>"+ 
@@ -922,7 +922,7 @@ else{
             "<td><input name='before_price[]' type='text'placeholder='Enter prodcut before price' class='form-control'></td>"+ 
             "<td><input name='buying_price[]' type='text'placeholder='Enter prodcut buying price' class='form-control'></td>"+ 
             "<td><input name='title[]' type='text'placeholder='Enter prodcut title' class='form-control'></td>"+ 
-            "<td><input name='img[]' type='file' class='form-control file'></td>"+ 
+            "<td><input name='image[]' type='file' class='form-control file'></td>"+ 
             "<td class='myfileSize'></td>"+ 
             "<td><button class='btn btn-danger cancel-btn'>Cancel </button></td>"+ 
             "</tr>";
@@ -943,6 +943,27 @@ else{
           
         })
 
+        // insert data
+        $("#myForm").submit(function(e){
+          e.preventDefault();
+
+          $.ajax({
+            url:"insert.php",
+            method:"POST",
+            data: new FormData(this),
+            contentType:false,
+            processData:false,
+            cache:false,
+            success:function(res){
+               console.log(res);
+            }
+            
+
+
+          })
+      });
+
+
     </script>
 
     <!-- Bootstrap tether Core JavaScript -->
@@ -961,9 +982,7 @@ else{
     <!--Custom JavaScript -->
     <script src="assets/js/feather.min.js"></script>
     <script src="assets/js/custom.min.js"></script>
-    <!-- --------------------------------------------------------------- -->
-    <!-- This page JavaScript -->
-    <!-- --------------------------------------------------------------- -->
+  
     <script src="assets/js/apexcharts.min.js"></script>
     <script src="assets/js/dashboard1.js"></script>
   </body>
