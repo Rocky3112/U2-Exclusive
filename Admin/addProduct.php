@@ -915,7 +915,26 @@ else{
       
     </div>
    
-    <div class="chat-windows"></div>
+    <table id="myTable" class="display">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>description</th>
+                        <th>current_price</th>
+                        <th>before_price</th>
+                        <th>buying_price</th>
+                        <th>title</th>
+                        <th>img</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                       
+                    </tr>
+                </thead>
+                <tbody class="allData">
+                   
+                </tbody>
+            </table>
 
     <script>
         $("#addData").click(function(){
@@ -964,6 +983,18 @@ else{
 
 
           })
+
+          
+      //select data # productSelect.php
+      
+        $.ajax({
+        url:"productSelect.php",
+        method:"POST",
+        success:function(mydata){
+         $(".allData").html(mydata)
+        }
+      })
+
       });
 
 
