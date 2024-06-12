@@ -642,6 +642,7 @@ if ($_SESSION['email'] == true) {
                 <th>Buying_price</th>
                 <th>Title</th>
                 <th>Image</th>
+                <th>Edit</th>
                 <th>Delete</th>
 
 
@@ -651,6 +652,36 @@ if ($_SESSION['email'] == true) {
 
             </tbody>
           </table>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">product update</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="myform2" method="post" enctype="multipart/form-data">
+                  <input class='form-control' name='name' id="name" type="text">
+                  <input class='form-control' name="description" id="description" type="text">
+                  <input class='form-control' name="current_price" id="current_price" type="text">
+                  <input class='form-control' name="before_price" id="before_price" type="text">
+                  <input class='form-control' name="buying_price" id="buying_price" type="text">
+                  <input class='form-control' name="title" id="title" type="text">
+                  <input class='form-control' name="image" id="image" type="file">
+
+                  <img height="100" width="100" src="" id="myimg" alt="">
+                  <input type="hidden" name='id' id='hiddenId'>
+                  <button class='btn btn-primary p-2'>update</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -693,41 +724,42 @@ if ($_SESSION['email'] == true) {
         })
 
       })
+       
+      //insert data 
+      $("#myform").submit(function(e){
+          e.preventDefault();
 
-      // insert data
-      $("#myForm").submit(function (e) {
-        e.preventDefault();
-
-        $.ajax({
-          url: "insert.php",
-          method: "POST",
-          data: new FormData(this),
-          contentType: false,
-          processData: false,
-          cache: false,
-          success: function (res) {
-            toastr.success('data inserted successfullty');
-          }
+          $.ajax({
+            url:"insert.php",
+            method:"POST",
+            data: new FormData(this),
+            contentType:false,
+            processData:false,
+            cache:false,
+            success:function(res){
+               toastr.success('data inserted successfullty');
+               onSelect()
+            }
+            
 
 
-        })
-
-
-        //select data # productSelect.php
-
-        $.ajax({
-          url: "productSelect.php",
-          method: "POST",
-          success: function (mydata) {
-            $(".allData").html(mydata)
-          }
-        })
-
+          })
       });
 
+
+      //select data # productSelect.php
       
+        $.ajax({
+        url:"productSelect.php",
+        method:"POST",
+        success:function(mydata){
+         $(".allData").html(mydata)
+        }
+      })
+     
+
       //for delete 
-      function DeleteData(id){
+      function deleteData(id){
         $.ajax({
           url:"delete.php",
           method:"GET",
@@ -738,8 +770,62 @@ if ($_SESSION['email'] == true) {
 
         })
       }
+     
+      function onSelect(){
+        $.ajax({
+        url:"productSelect.php",
+        method:"POST",
+        success:function(mydata){
+         $(".allData").html(mydata)
+        }
+      })
+      }
 
 
+
+      ///for edit data 
+
+      function editData(id) {
+        var myid = id;
+        $("#hiddenId").val(myid);
+        $("#exampleModal").modal('show');
+
+        $.ajax({
+          url: "update.php",
+          method: "GET",
+          data: { id: id },
+          success: function (response) {
+            var mydata = JSON.parse(response);
+            $("#name").val(mydata.name);
+            $("#description").val(mydata.description);
+            $("#current_price").val(mydata.current_price);
+            $("#before_price").val(mydata.before_price);
+            $("#buying_price").val(mydata.buying_price);
+            $("#title").val(mydata.title);
+            var myimg = document.getElementById("myimg");
+            myimg.src = mydata.image;
+          }
+        })
+      }
+
+      //update user
+
+      $("#myform2").submit(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+          url: "updateUser.php",
+          method: "POST",
+          data: new FormData(this),
+          contentType: false,
+          processData: false,
+          cache: false,
+          success: function (res) {
+            toastr.success('data updated successfully');
+            onSelect()
+          }
+        })
+      });
     </script>
 
     <!-- Bootstrap tether Core JavaScript -->
