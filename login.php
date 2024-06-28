@@ -10,6 +10,7 @@
        $row = mysqli_fetch_array($ex);
        if($row){
         $_SESSION['email'] = $row['email'];
+        $_SESSION['id']= $row['id'];
         header("location:product.php");
        }else{
         echo "<script>alert('email and pass doesnot match')</script>";
