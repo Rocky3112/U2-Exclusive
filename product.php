@@ -174,7 +174,49 @@ $msg="";
         </div>
     </div>
 <!--card section here--->
-   
+   <!-- Footer -->
+   <footer class="footer bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat elit nec ex fermentum, ut
+                    aliquet eros hendrerit.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <address>
+                    <strong>Address:</strong><br>
+                    123 Ecommerce Street,<br>
+                    City, Country<br>
+                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Phone:</strong> +123-456-7890
+                </address>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Your Ecommerce. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
        
    
